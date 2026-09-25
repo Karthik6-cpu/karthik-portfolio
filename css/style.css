@@ -1,0 +1,403 @@
+/* =========================================================
+   KARTHIK PORTFOLIO
+   Custom Styles
+   ========================================================= */
+
+
+/* =========================
+   BASE
+   ========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+::selection {
+    background: #0f766e;
+    color: #ffffff;
+}
+
+
+/* =========================
+   SCROLLBAR
+   ========================= */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f8f7f2;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #172554;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0f766e;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background: #0f766e;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+#home {
+    isolation: isolate;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border: 1px solid rgba(15, 118, 110, 0.08);
+    border-radius: 50%;
+    right: -180px;
+    top: 20%;
+    z-index: -1;
+}
+
+#home::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border: 1px solid rgba(249, 115, 22, 0.08);
+    border-radius: 50%;
+    left: -160px;
+    bottom: 5%;
+    z-index: -1;
+}
+
+
+/* =========================
+   GLASS / STAT CARDS
+   ========================= */
+
+.stat-card {
+    padding: 28px;
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(23, 37, 84, 0.08);
+    border-radius: 20px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(15, 118, 110, 0.25);
+    box-shadow: 0 18px 40px rgba(23, 37, 84, 0.08);
+}
+
+
+/* =========================
+   SKILLS
+   ========================= */
+
+.skill-card {
+    padding: 28px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(15, 118, 110, 0.5);
+}
+
+.dark-skill {
+    display: inline-flex;
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.78rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================
+   LIGHT SKILL BADGES
+   ========================= */
+
+.light-skill {
+    display: inline-flex;
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: #eef3f1;
+    color: #172554;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+
+/* =========================
+   PROJECT CARDS
+   ========================= */
+
+.project-card {
+    background: #ffffff;
+    border: 1px solid rgba(23, 37, 84, 0.08);
+    border-radius: 26px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(23, 37, 84, 0.05);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(23, 37, 84, 0.12);
+    border-color: rgba(15, 118, 110, 0.2);
+}
+
+
+.project-placeholder {
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.project-placeholder::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+}
+
+
+.project-placeholder::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    border-radius: 50%;
+}
+
+
+.project-placeholder span {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================
+   OFFER CARDS
+   ========================= */
+
+.offer-card {
+    background: #ffffff;
+    border: 1px solid rgba(23, 37, 84, 0.08);
+    border-radius: 26px;
+    padding: 32px;
+
+    box-shadow: 0 15px 40px rgba(23, 37, 84, 0.05);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 55px rgba(23, 37, 84, 0.10);
+}
+
+
+/* =========================
+   EDUCATION
+   ========================= */
+
+.education-card {
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid rgba(23, 37, 84, 0.08);
+    border-radius: 22px;
+
+    position: relative;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateX(8px);
+    border-color: rgba(15, 118, 110, 0.25);
+    box-shadow: 0 15px 40px rgba(23, 37, 84, 0.07);
+}
+
+
+/* =========================
+   CERTIFICATIONS
+   ========================= */
+
+.certificate-card {
+    padding: 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(15, 118, 110, 0.45);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.certificate-card span {
+    color: #0f766e;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.certificate-card h3 {
+    margin-top: 10px;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+
+/* =========================
+   SCROLL REVEAL
+   ========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   BUTTON EFFECT
+   ========================= */
+
+a,
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    #home::before {
+        width: 300px;
+        height: 300px;
+        right: -150px;
+    }
+
+    #home::after {
+        width: 250px;
+        height: 250px;
+        left: -130px;
+    }
+
+    .project-placeholder {
+        height: 200px;
+    }
+
+    .education-card:hover {
+        transform: translateY(-4px);
+    }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+   ========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
